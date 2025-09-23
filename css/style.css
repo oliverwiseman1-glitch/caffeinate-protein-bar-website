@@ -1392,3 +1392,7 @@ footer::before {
         font-size: var(--font-size-base);
     }
 }
+header {
+    position: relative !important;
+    top: auto !important;
+}
