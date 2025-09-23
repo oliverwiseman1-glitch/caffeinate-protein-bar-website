@@ -130,6 +130,7 @@ header {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 var(--container-padding);
+    position: relative; /* ensure navbar scrolls with the page */
 }
 
 .nav-brand .logo h1 {
