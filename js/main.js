@@ -328,3 +328,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Nutrition information toggle function (global scope)
+function toggleNutrition(id) {
+    const nutritionPanel = document.getElementById(id);
+    const button = nutritionPanel.previousElementSibling;
+    const icon = button.querySelector('.toggle-icon');
+    const text = button.querySelector('span:first-child');
+    
+    if (nutritionPanel.style.display === 'none' || nutritionPanel.style.display === '') {
+        // Show panel
+        nutritionPanel.style.display = 'block';
+        nutritionPanel.style.opacity = '0';
+        nutritionPanel.style.transform = 'translateY(-10px)';
+        nutritionPanel.style.transition = 'all 0.3s ease';
+        
+        setTimeout(() => {
+            nutritionPanel.style.opacity = '1';
+            nutritionPanel.style.transform = 'translateY(0)';
+        }, 10);
+        
+        icon.textContent = '▲';
+        text.textContent = 'Hide Nutritional Information';
+    } else {
+        // Hide panel
+        nutritionPanel.style.opacity = '0';
+        nutritionPanel.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            nutritionPanel.style.display = 'none';
+        }, 300);
+        
+        icon.textContent = '▼';
+        text.textContent = 'View Nutritional Information';
+    }
+}

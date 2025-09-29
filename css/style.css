@@ -1494,3 +1494,174 @@ footer::before {
         padding: 24px 16px;
     }
 }
+
+/* Nutrition Toggle Styles */
+.nutrition-toggle {
+    width: 100%;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.nutrition-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, #5555eb 0%, #7c3aed 100%);
+}
+
+.nutrition-toggle:active {
+    transform: translateY(0);
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.nutrition-facts {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.nutrition-facts h4 {
+    color: var(--primary-dark);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--primary-energy);
+    padding-bottom: 8px;
+}
+
+.nutrition-facts table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.nutrition-facts table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--light-gray);
+    font-size: var(--font-size-sm);
+}
+
+.nutrition-facts table td:first-child {
+    font-weight: 600;
+    color: var(--primary-dark);
+    width: 50%;
+}
+
+.nutrition-facts table td:last-child {
+    color: var(--medium-gray);
+    text-align: right;
+    font-weight: 500;
+}
+
+.nutrition-facts p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin: 16px 0;
+}
+
+.nutrition-facts p strong {
+    color: var(--primary-dark);
+}
+
+/* Nutrition Card Layout */
+.nutrition-card {
+    background: var(--off-white);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.nutrition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.nutrition-card h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.regulatory-info {
+    background: var(--gradient-light);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 40px;
+    border-left: 4px solid var(--primary-energy);
+}
+
+.regulatory-info h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 24px;
+}
+
+.regulatory-info .warnings p {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin: 12px 0;
+}
+
+.caffeine-warning {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.caffeine-warning strong {
+    color: var(--accent-color);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .nutrition-card {
+        padding: 24px;
+    }
+    
+    .regulatory-info {
+        padding: 24px;
+    }
+    
+    .nutrition-toggle {
+        padding: 14px 20px;
+        font-size: var(--font-size-sm);
+    }
+}

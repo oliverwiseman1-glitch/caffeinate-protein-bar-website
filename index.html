@@ -285,7 +285,11 @@
                 <div class="nutrition-grid">
                     <div class="nutrition-card">
                         <h3>Buzz Me Up</h3>
-                        <div class="nutrition-facts">
+                        <button class="nutrition-toggle" onclick="toggleNutrition('buzz-me-up')">
+                            <span>View Nutritional Information</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        <div class="nutrition-facts" id="buzz-me-up" style="display: none;">
                             <h4>Nutritional Information (per 100g):</h4>
                             <table>
                                 <tr><td>Energy</td><td>1450 kJ / 350 kcal</td></tr>
@@ -304,7 +308,11 @@
                     
                     <div class="nutrition-card">
                         <h3>Mind Buzz</h3>
-                        <div class="nutrition-facts">
+                        <button class="nutrition-toggle" onclick="toggleNutrition('mind-buzz')">
+                            <span>View Nutritional Information</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        <div class="nutrition-facts" id="mind-buzz" style="display: none;">
                             <h4>Nutritional Information (per 100g):</h4>
                             <table>
                                 <tr><td>Energy</td><td>1350 kJ / 320 kcal</td></tr>
@@ -323,7 +331,11 @@
                     
                     <div class="nutrition-card">
                         <h3>Power Buzz</h3>
-                        <div class="nutrition-facts">
+                        <button class="nutrition-toggle" onclick="toggleNutrition('power-buzz')">
+                            <span>View Nutritional Information</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        <div class="nutrition-facts" id="power-buzz" style="display: none;">
                             <h4>Nutritional Information (per 100g):</h4>
                             <table>
                                 <tr><td>Energy</td><td>1500 kJ / 360 kcal</td></tr>
