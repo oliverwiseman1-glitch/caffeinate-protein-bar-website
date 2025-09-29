@@ -452,11 +452,145 @@ header {
 
 .floating-elements {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+/* Additional floating elements */
+.element-4 {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    animation: pulse 3s infinite;
+    font-size: 2rem;
+    opacity: 0.6;
+}
+
+.element-5 {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    animation: bounce 4s infinite;
+    font-size: 1.8rem;
+    opacity: 0.5;
+}
+
+.element-6 {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    animation: rotate 5s linear infinite;
+    font-size: 1.5rem;
+    opacity: 0.4;
+}
+
+/* Gym background elements */
+.gym-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.02;
+    z-index: 0;
+}
+
+.barbell-icon,
+.dumbbell-icon,
+.kettlebell-icon {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: var(--medium-gray);
+    border-radius: 10px;
+}
+
+.barbell-icon {
+    top: 20%;
+    left: 5%;
+    width: 100px;
+    transform: rotate(25deg);
+}
+
+.barbell-icon::before,
+.barbell-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: var(--medium-gray);
+    border-radius: 5px;
+    top: -10px;
+}
+
+.barbell-icon::before {
+    left: -5px;
+}
+
+.barbell-icon::after {
+    right: -5px;
+}
+
+.dumbbell-icon {
+    bottom: 30%;
+    right: 8%;
+    width: 80px;
+    transform: rotate(-15deg);
+}
+
+.dumbbell-icon::before,
+.dumbbell-icon::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background: var(--medium-gray);
+    border-radius: 3px;
+    top: -5px;
+}
+
+.dumbbell-icon::before {
+    left: -3px;
+}
+
+.dumbbell-icon::after {
+    right: -3px;
+}
+
+.kettlebell-icon {
+    top: 70%;
+    left: 70%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+.kettlebell-icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--medium-gray);
+    border-radius: 3px;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .element {
@@ -1666,6 +1800,66 @@ footer::before {
     background: var(--gradient-light);
     position: relative;
     overflow: hidden;
+}
+
+/* Workout Background Elements */
+.workout-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 1;
+}
+
+.workout-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.workout-icon {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.workout-icon.gym-weights {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.workout-icon.cardio {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.workout-icon.energy {
+    top: 30%;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+.workout-icon.protein {
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4.5s;
+}
+
+.workout-icon.time {
+    top: 70%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(5deg); }
+    66% { transform: translateY(10px) rotate(-3deg); }
 }
 
 .story-content {
