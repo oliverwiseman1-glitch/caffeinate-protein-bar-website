@@ -1757,14 +1757,26 @@ footer::before {
     gap: 32px;
 }
 
+.founders-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .founder-card {
     background: var(--white);
-    border-radius: 20px;
-    padding: 32px;
-    box-shadow: var(--shadow-lg);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-md);
     text-align: center;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
 }
 
 .founder-card::before {
@@ -1778,12 +1790,12 @@ footer::before {
 }
 
 .founder-image {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .founder-placeholder {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: var(--gradient-primary);
     display: flex;
@@ -1794,33 +1806,33 @@ footer::before {
 }
 
 .founder-initials {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     font-weight: 800;
     color: white;
     letter-spacing: 1px;
 }
 
 .founder-info h4 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: 700;
     color: var(--primary-dark);
     margin-bottom: 4px;
 }
 
 .founder-title {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--primary-energy);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .founder-info blockquote {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     font-style: italic;
     color: var(--medium-gray);
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
     border: none;
@@ -1887,16 +1899,20 @@ footer::before {
     }
     
     .founder-card {
-        padding: 24px;
+        padding: 20px;
     }
     
     .founder-placeholder {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
     
     .founder-initials {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-lg);
+    }
+    
+    .founders-section {
+        gap: 20px;
     }
     
     .story-intro h3,
