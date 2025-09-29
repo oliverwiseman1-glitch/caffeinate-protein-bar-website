@@ -280,27 +280,32 @@ header {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 24px;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .title-line {
     display: block;
-    color: var(--primary-dark);
+    color: white;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .title-line.highlight {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.5)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
 }
 
 .hero-subtitle {
     font-size: var(--font-size-lg);
-    color: var(--medium-gray);
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
     margin-bottom: 40px;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.9);
+    font-weight: 400;
 }
 
 .hero-actions {
@@ -386,10 +391,11 @@ header {
 
 .hero-stats .stat-label {
     font-size: var(--font-size-sm);
-    color: var(--medium-gray);
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .hero-visual {
