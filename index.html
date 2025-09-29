@@ -355,12 +355,24 @@
                 
                 <div class="regulatory-info">
                     <h3>Important Information</h3>
-                    <div class="warnings">
+                    
+                    <!-- Mandatory Caffeine Warning (always visible) -->
+                    <div class="mandatory-warnings">
                         <p class="caffeine-warning"><strong>Hög koffeinhal. Rekommenderas inte för barn eller gravida eller ammande kvinnor.</strong> (High caffeine content. Not recommended for children or pregnant or breast-feeding women.)</p>
+                    </div>
+                    
+                    <!-- Additional Information (collapsible) -->
+                    <button class="regulatory-toggle" onclick="toggleRegulatory('additional-info')">
+                        <span>View Additional Product Information</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+                    
+                    <div class="additional-info" id="additional-info" style="display: none;">
                         <p><strong>Storage:</strong> Store in a cool, dry place away from direct sunlight.</p>
                         <p><strong>Best before:</strong> See date on package.</p>
                         <p><strong>Country of origin:</strong> Made in Sweden</p>
                         <p><strong>Distributor:</strong> BuzzBar AB, Stockholm, Sweden</p>
+                        <p><strong>Note:</strong> Individual results may vary. Please consult your healthcare provider before consuming if you are pregnant, nursing, or have any medical conditions.</p>
                     </div>
                 </div>
             </div>
