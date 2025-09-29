@@ -363,38 +363,3 @@ function toggleNutrition(id) {
         text.textContent = 'View Nutritional Information';
     }
 }
-
-// Regulatory information toggle function (global scope)
-function toggleRegulatory(id) {
-    const regulatoryPanel = document.getElementById(id);
-    const button = regulatoryPanel.previousElementSibling;
-    const icon = button.querySelector('.toggle-icon');
-    const text = button.querySelector('span:first-child');
-    
-    if (regulatoryPanel.style.display === 'none' || regulatoryPanel.style.display === '') {
-        // Show panel
-        regulatoryPanel.style.display = 'block';
-        regulatoryPanel.style.opacity = '0';
-        regulatoryPanel.style.transform = 'translateY(-10px)';
-        regulatoryPanel.style.transition = 'all 0.3s ease';
-        
-        setTimeout(() => {
-            regulatoryPanel.style.opacity = '1';
-            regulatoryPanel.style.transform = 'translateY(0)';
-        }, 10);
-        
-        icon.textContent = '▲';
-        text.textContent = 'Hide Additional Product Information';
-    } else {
-        // Hide panel
-        regulatoryPanel.style.opacity = '0';
-        regulatoryPanel.style.transform = 'translateY(-10px)';
-        
-        setTimeout(() => {
-            regulatoryPanel.style.display = 'none';
-        }, 300);
-        
-        icon.textContent = '▼';
-        text.textContent = 'View Additional Product Information';
-    }
-}
