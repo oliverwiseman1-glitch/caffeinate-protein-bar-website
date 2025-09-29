@@ -1818,65 +1818,6 @@ footer::before {
     overflow: hidden;
 }
 
-/* Workout Background Elements */
-.workout-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0.015;
-    z-index: 1;
-}
-
-.workout-icons {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.workout-icon {
-    position: absolute;
-    font-size: 3rem;
-    animation: float 6s ease-in-out infinite;
-}
-
-.workout-icon.gym-weights {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.workout-icon.cardio {
-    top: 60%;
-    right: 15%;
-    animation-delay: 1.5s;
-}
-
-.workout-icon.energy {
-    top: 30%;
-    right: 25%;
-    animation-delay: 3s;
-}
-
-.workout-icon.protein {
-    bottom: 30%;
-    left: 20%;
-    animation-delay: 4.5s;
-}
-
-.workout-icon.time {
-    top: 70%;
-    left: 60%;
-    animation-delay: 2s;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-20px) rotate(5deg); }
-    66% { transform: translateY(10px) rotate(-3deg); }
-}
 
 .story-content {
     max-width: 1200px;
