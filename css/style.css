@@ -1392,3 +1392,105 @@ footer::before {
         font-size: var(--font-size-base);
     }
 }
+/* Coming Soon Reviews Section */
+.coming-soon-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.review-placeholder {
+    background: var(--light-gray);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.review-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-energy);
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.review-placeholder h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+}
+
+.review-placeholder p {
+    color: var(--medium-gray);
+    line-height: 1.7;
+}
+
+.launch-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+    padding: 60px 40px;
+    background: var(--gradient-light);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.launch-stats .stat-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.launch-stats .stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.launch-stats .stat-number {
+    display: block;
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--primary-energy);
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.launch-stats .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--medium-gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .coming-soon-reviews {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .launch-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 20px;
+    }
+    
+    .review-placeholder {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .launch-stats {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+    }
+}
